@@ -17,6 +17,7 @@
 #ifndef UFG_COMMON_PLATFORM_H_
 #define UFG_COMMON_PLATFORM_H_
 
+#include <variant>
 #include <string>
 
 // Used for DebugBreak.
