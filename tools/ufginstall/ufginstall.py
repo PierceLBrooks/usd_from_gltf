@@ -217,7 +217,7 @@ class PngDep(Dep):
     dl_dir = download_archive(url, path, force)
     zlib_dir = os.path.normpath(os.path.join(cfg.src_dir, 'zlib-1.2.11'))
     extra_args = [
-        '-DCMAKE_POSITION_INDEPENDENT_CODE=1', '-DPNG_BUILD_ZLIB=yesplease',
+        '-DCMAKE_POSITION_INDEPENDENT_CODE=1', '-DPNG_BUILD_ZLIB=yesplease', '-DPNG_ARM_NEON=off',
         '-DZLIB_INCLUDE_DIR=' + zlib_dir
     ]
     if platform.system() == 'Windows':
