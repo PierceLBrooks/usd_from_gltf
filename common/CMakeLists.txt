@@ -31,6 +31,7 @@ add_library(common
 
 file(GLOB COMMON_HEADERS "*.h")
 set_target_properties(common PROPERTIES PUBLIC_HEADER "${COMMON_HEADERS}")
+target_compile_features(common PRIVATE cxx_std_17)
 
 target_link_libraries(common gltf)
 

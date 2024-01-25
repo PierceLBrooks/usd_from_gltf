@@ -34,4 +34,6 @@ target_link_libraries(usd_from_gltf
   ${USD_LIBS}
 )
 
+target_compile_features(usd_from_gltf PRIVATE cxx_std_17)
+
 install(TARGETS usd_from_gltf DESTINATION bin)

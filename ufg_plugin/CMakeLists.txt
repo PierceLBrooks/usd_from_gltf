@@ -48,4 +48,6 @@ set_target_properties(ufg_plugin PROPERTIES PREFIX "" SUFFIX ".dll")
 
 set_target_properties(ufg_plugin PROPERTIES RESOURCE plugInfo.json)
 
+target_compile_features(ufg_plugin PRIVATE cxx_std_17)
+
 install(TARGETS ufg_plugin DESTINATION bin/ufg_plugin)

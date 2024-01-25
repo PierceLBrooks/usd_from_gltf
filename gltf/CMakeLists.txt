@@ -51,5 +51,6 @@ add_library(gltf
 
 file(GLOB GLTF_HEADERS "*.h")
 set_target_properties(gltf PROPERTIES PUBLIC_HEADER "${GLTF_HEADERS}")
+target_compile_features(gltf PRIVATE cxx_std_17)
 
 install(TARGETS gltf EXPORT ufglib DESTINATION lib/ufg PUBLIC_HEADER DESTINATION include/ufg/gltf)

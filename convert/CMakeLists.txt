@@ -36,6 +36,7 @@ add_library(convert
 
 file(GLOB CONVERT_HEADERS "*.h")
 set_target_properties(convert PROPERTIES PUBLIC_HEADER "${CONVERT_HEADERS}")
+target_compile_features(convert PRIVATE cxx_std_17)
 
 target_link_libraries(convert process)
 

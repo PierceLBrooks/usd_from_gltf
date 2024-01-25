@@ -60,6 +60,7 @@ add_library(process
 
 file(GLOB PROCESS_HEADERS "*.h")
 set_target_properties(process PROPERTIES PUBLIC_HEADER "${PROCESS_HEADERS}")
+target_compile_features(process PRIVATE cxx_std_17)
 
 # Libpng and libturbojpeg do not define library directories. We need to search
 # for them because on different distros, they appear in different locations.
